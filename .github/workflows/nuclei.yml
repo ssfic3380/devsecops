@@ -14,7 +14,9 @@ jobs:
         with:
           target: http://testphp.vulnweb.com
           flags: "-severity info -stats"
-
+          github-report: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
         with:
